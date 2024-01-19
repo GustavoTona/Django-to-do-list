@@ -1,6 +1,4 @@
 """
-CONFIGURACOES ASSINCRONA
-
 ASGI config for setup project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.

@@ -1,6 +1,4 @@
 """
-DETALHAR AS URLS
-
 URL configuration for setup project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,17 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from usuarios.views import index # primeiro passo é importar o que acabamos de escrever 
-# de usuarios/views e importar a classe index
-
+from todos.views import home #chamar a view home na pasta TODOS 
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-
-    path( # para registrar a funcao path recebe a raiz
-        "",
-        index, # qual url vai ser acessada
-        name="index", # deve um nome para ser idenficada
-    )
+    path('admin/', admin.site.urls),
+    path('',home), #rota criada e a view para ser executada que no caso HOME
 ]
+

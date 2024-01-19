@@ -1,6 +1,4 @@
 """
-
-Como o servidor deve ser comunicado
 WSGI config for setup project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.

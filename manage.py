@@ -1,5 +1,4 @@
-#!/usr/bin/env python 
-# ULTILITARIO DE LINHA DE COMANDOS
+#!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

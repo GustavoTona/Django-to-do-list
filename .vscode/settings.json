@@ -1,0 +1,7 @@
+{
+
+    "emmet.includeLanguages": { /// para adiicionar o html nos arquivos html do django
+        "django-html": "html"
+    }
+      
+}

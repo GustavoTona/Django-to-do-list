@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from todos.views import home #chamar a view home na pasta TODOS 
+
+from todos.views import todo_list #puxar o todo list para a posta views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home), #rota criada e a view para ser executada que no caso HOME
+    path("", todo_list),#rota criada e a view para ser executada que no caso HOME
 ]
 

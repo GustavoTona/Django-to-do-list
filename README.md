@@ -4,9 +4,8 @@
 
 This project is a study, it was created for the purposes of developing and testing knowledge.
 
-```
-Este projeto é um estudo, foi criado com o objetivo de desenvolver e testar conhecimentos.
-```
+Este aplicativo simples e eficiente permite que você gerencie suas tarefas diárias de maneira organizada e intuitiva. Desenvolvido em Python com o poderoso framework Django, nossa aplicação oferece uma experiência amigável e funcional para o acompanhamento de suas atividades.
+
 
 
 ### 📋 Pré-requisitos
@@ -19,33 +18,39 @@ Dar exemplos
 
 ### 🔧 Instalação
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+Siga as instruções abaixo para configurar o projeto em seu ambiente local:
 
-Diga como essa etapa será:
-
-```
-Dar exemplos
-```
-
-E repita:
+Clone o Repositório:
 
 ```
-Até finalizar
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+```
+
+Instale as Dependências:
+
+
+```
+pip install -r requirements.txt
+```
+
+Execute as Migrações:
+
+```
+python manage.py migrate
+```
+
+Inicie o Servidor de Desenvolvimento:
+
+```
+python manage.py runserver
 ```
 
 Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
 
-## ⚙️ Executando os testes
+## ⚙️ Como é o projeto
 
 Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
 
 ## 📦 Implantação
 
@@ -70,6 +75,6 @@ Essa é uma versão para estudos.
 
 ## ✒️ Autor
 
-* **Gustavo tona** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/gustavotona)
+* Feito por **Gustavo tona** - *FullStack* - [desenvolvedor](https://github.com/gustavotona)
 
 ---

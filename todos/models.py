@@ -15,10 +15,12 @@ class Todo(models.Model): #estamos puxando da classe models de cima
         blank= False
         )
     
-    deadline = models.DateTimeField(
+    deadline = models.DateField(
         null=False,
         blank=False,
     )
-    finished_at =models.DateTimeField(
-        null=True # para salvar a data quando for finalziada
+    finished_at =models.DateField(
+        null=True, # para salvar a data quando for finalziada
     )
+
+    #TODA VEZ QUE MUDAR O MODELS, TEM QUE FAZER O MAKEMIGRATIONS E O MIGRATE

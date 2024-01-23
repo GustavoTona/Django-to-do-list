@@ -1,12 +1,35 @@
-from django.shortcuts import render
-# deve puxar o http response
+
+
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, View #importando uma lista generica / listview
+
+from django.urls import reverse_lazy #importar o redirecionamento da pagina 
+from django.shortcuts import get_object_or_404, redirect
+from datetime import date 
 
 from .models import Todo  # vamos na pasta models pegar a classe Todo
 
-def todo_list(request):
-    todos = Todo.objects.all() #classe de modelo precisa de um objects para pegas no banco de dados
+class TodoListView (ListView): #pagina todo
+    model = Todo 
 
-#colocar o render para renderizar o html 
-    return render(request, "todos/todo_list.html", {"todos": todos}) #nome pegar do banco de dados e aparecer no html
+class TodoCreateView(CreateView):
+    model = Todo
+    fields = ["title", "deadline"]
+    success_url = reverse_lazy ("todo_list") # para depois de aplicado voltar a todo list
+    
 
-#deve ser criada uma pasta com o nome template depois o nome do projeto e o html
+class TodoUpdateView(UpdateView):
+    model = Todo
+    fields = ["title", "deadline"]
+    success_url = reverse_lazy("todo_list")
+
+class TodoDeleteView(DeleteView): 
+    model = Todo 
+    success_url = reverse_lazy("todo_list")
+
+
+class TodoCompleteView(View):
+    def get(self, request, pk): 
+        todo = get_object_or_404(Todo, pk=pk)
+        todo.finished_at = date.today()
+        todo.save()
+        return redirect("todo_list")

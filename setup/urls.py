@@ -17,10 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from todos.views import todo_list #puxar o todo list para a posta views
+from todos.views import TodoListView, TodoCreateView, TodoUpdateView, TodoDeleteView, TodoCompleteView #puxar o todo list para a posta views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", todo_list),#rota criada e a view para ser executada que no caso HOME
+    path("", TodoListView.as_view(), name="todo_list"),#rota criada e a view para ser executada na class TodoListview
+    path("create", TodoCreateView.as_view(), name="todo_create"), 
+    path("update/<int:pk>", TodoUpdateView.as_view(), name="todo_update"),
+    path("delete/<int:pk>", TodoDeleteView.as_view(), name="todo_delete"),
+    path("complete/<int:pk>", TodoCompleteView.as_view(), name="todo_complete"),
+
 ]
 
